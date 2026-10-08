@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江海明珠 · 魅力南通</title>
+    <style>
+        /* 页面基础样式 */
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.8;
+        }
+        /* 顶部横幅 */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+        .header p { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
+        
+        /* 内容主体容器 */
+        .container {
+            width: 85%;
+            max-width: 1050px;
+            margin: -30px auto 40px auto;
+            background: white;
+            padding: 35px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-radius: 12px;
+        }
+        
+        h2 { color: #2a5298; border-bottom: 2px solid #e1e8ed; padding-bottom: 10px; margin-top: 30px; }
+        
+        /* 人物介绍卡片 */
+        .person-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #2a5298;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        /* 第一板块里的超链接图片样式 */
+        .person-link {
+            float: right;
+            width: 180px;
+            margin: 0 0 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #2a5298;
+            transition: transform 0.3s ease;
+        }
+        .person-link:hover { transform: scale(1.05); }
+        .person-link img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .person-link span { display: block; margin-top: 8px; font-weight: bold; font-size: 0.9rem;}
+
+        /* 五山一河传说列表 */
+        .legend-list {
+            margin: 20px 0;
+        }
+        .legend-item {
+            background: #fff;
+            border: 1px solid #e1e8ed;
+            border-left: 4px solid #f39c12;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: background 0.3s;
+        }
+        .legend-item:hover { background: #fdfbf7; }
+        .legend-item h4 { margin: 0 0 8px 0; color: #d35400; font-size: 1.1rem; }
+        .legend-item p { margin: 0; font-size: 0.95rem; color: #555; }
+
+        /* 图片超链接排版 (Flexbox) */
+        .scenic-spots {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .spot-item {
+            width: 42%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .spot-item:hover { transform: translateY(-10px); }
+        .spot-item a { text-decoration: none; color: #333; display: block; }
+        .spot-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .spot-item h3 { margin: 15px 0 5px 0; font-size: 1.2rem; }
+        .spot-item p { font-size: 0.95rem; color: #666; margin: 0; }
+
+        /* 表格排版 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td { border: 1px solid #e1e8ed; padding: 12px; text-align: center; }
+        th { background-color: #2a5298; color: white; }
+        tr:nth-child(even) { background-color: #f8f9fa; }
+        tr:hover { background-color: #e2e6ea; }
+        
+        .footer { text-align: center; padding: 20px; color: #888; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>江海明珠 · 魅力南通</h1>
+        <p>据江海之会，扼南北之喉 —— 欢迎来到我的家乡</p>
+    </div>
+
+    <div class="container">
+        
+        <!-- 第一板块：张謇生平 -->
+        <h2>中国近代第一城与先贤张謇</h2>
+        <div class="person-card">
+            <!-- 必做要求之一：带图片的超链接 -->
+            <a href="https://baike.baidu.com/item/%E5%BC%A0%E8%AC%87/1129763" target="_blank" class="person-link">
+                <!-- 替换为真实的张謇图片 -->
+                <img src="image_d101c8.jpg" alt="张謇百科">
+                <span>点击前往百度百科</span>
+            </a>
+            <p><strong>张謇（1853-1926）</strong>，字季直，江苏南通人，清末状元。他不仅是中国近代杰出的实业家、政治家、教育家，更是南通近代化的奠基人。面对内忧外患的晚清局势，他毅然弃政从商，提出“父教育，母实业”的宏伟主张。</p>
+            <p>张謇一生创办了以大生纱厂为核心的诸多企业，并建立了中国第一所师范学校（南通师范）和第一座公共博物馆（南通博物苑）。他倾尽一生心血与财富，将南通建设成为了享誉全国的“中国近代第一城”，其敢为人先、实干兴邦的精神至今仍深深影响着这片土地。</p>
+        </div>
+
+        <!-- 第二板块：方言特色 -->
+        <h2>奇妙的方言：六县一市七种方言</h2>
+        <p>南通地处江海交汇的南北过渡带，因历史上的江岸坍塌、沙洲涨落以及多次移民潮，形成了极为独特且复杂的方言分布。民间素有“十里不同音，百里不同俗”的说法。在这片并不辽阔的土地上，竟并存着七种截然不同的方言，这在中国语言文化中是十分罕见的“方言岛”奇观。这些方言大致可归属为江淮官话和吴语两大派系，不仅保留了大量古汉语的入声和特殊词汇，更是南通江海文化的活化石。无论你是听到字正腔圆、铿锵有力的如皋话，还是吴侬软语、婉转绵长的启海话，都能感受到南通深厚的历史底蕴与包容性。</p>
+        
+        <table>
+            <tr>
+                <th>方言分类</th>
+                <th>代表区域</th>
+                <th>方言特色</th>
+            </tr>
+            <tr>
+                <td>南通话（江淮官话）</td>
+                <td>崇川区、通州区部分</td>
+                <td>语调独特，保留了大量古汉语发音，是典型的“方言岛”</td>
+            </tr>
+            <tr>
+                <td>如海方言（江淮官话）</td>
+                <td>如皋、海安、如东</td>
+                <td>受苏北语言影响较大，发音较为硬朗干脆</td>
+            </tr>
+            <tr>
+                <td>启海话（吴语太湖片）</td>
+                <td>启东、海门、通州东部</td>
+                <td>又称“沙地话”，与上海崇明话同源，属于江南吴侬软语</td>
+            </tr>
+        </table>
+
+        <!-- 第三板块：五山一河 -->
+        <h2>绿水青山：五山一河的民俗与传说</h2>
+        <p>万里长江入海口北岸，坐落着著名的“南通五山”与环抱古城的“濠河”。它们不仅构成了南通优美的生态画卷，每一座山、每一湾水背后更蕴含着丰富的神话与历史传说。</p>
+        
+        <div class="legend-list">
+            <div class="legend-item">
+                <h4>狼山</h4>
+                <p>狼山是五山之首，也是著名的佛教名山。相传大势至菩萨在此化身为大圣菩萨（僧伽大圣），施展佛法降伏了盘踞于此的白狼精，狼山因此得名。山顶的广教禅寺香火鼎盛，自古便有“江海第一山”的美誉，承载着南通人祈福保平安的深厚信仰。</p>
+            </div>
+            <div class="legend-item">
+                <h4>军山</h4>
+                <p>关于军山的传说充满了历史的厚重感。一说秦始皇当年东巡时，为防海盗而在此驻扎军队；民间也有传闻称楚汉相争时，西楚霸王项羽曾在此安营扎寨。山上不仅建有气象台，还有供奉观音的普陀院，是一座融汇了军事传说与宗教文化的秀丽山峰。</p>
+            </div>
+            <div class="legend-item">
+                <h4>剑山</h4>
+                <p>剑山因其山脊笔直、形似一柄出鞘的宝剑而得名。相传秦始皇曾为防此地出天子，一剑斩断地脉，留下了剑身化作此山。此外，民间流传文殊菩萨曾在剑山显化，故山上的文殊院常年吸引众多学子在考前来此祈求金榜题名、智慧广开。</p>
+            </div>
+            <div class="legend-item">
+                <h4>黄泥山</h4>
+                <p>黄泥山位于长江江畔，山石多呈黄褐色，宛如一条黄龙卧于江边。传说晋代名将王濬曾率领水军在此停泊休整。此处不仅保留着古炮台遗址，见证了南通人民抗击外侮的英勇历史，后来也成为了张謇先生开展水利与港口建设的重要见证地。</p>
+            </div>
+            <div class="legend-item">
+                <h4>马鞍山</h4>
+                <p>马鞍山因其山峰两头高、中间低，形似马鞍而得名。民间浪漫地传说这是天马下凡时，不慎遗落人间的神马坐骑之鞍。此山环境极为幽静，植被丰茂，是五山中颇具野趣的一座，相传古代隐士多爱在此结茅修道，至今仍是市民踏青赏花的好去处。</p>
+            </div>
+            <div class="legend-item">
+                <h4>濠河</h4>
+                <p>濠河是南通的母亲河，更是国内仅存的四条古护城河之一。相传濠河水系源自后周时期筑城时的护城壕，千百年来水波荡漾，如同一条翠绿的项链环抱古城。夜游濠河，水色灯影交相辉映，沿岸分布着博物苑、钟楼等众多名胜古迹，流淌着近代第一城的岁月记忆。</p>
+            </div>
+        </div>
+        
+        <!-- 必做要求之二、三：带图片的超链接 -->
+        <div class="scenic-spots">
+            <div class="spot-item">
+                <a href="https://baike.baidu.com/item/狼山风景名胜区" target="_blank">
+                    <!-- 替换为真实的狼山图片 -->
+                    <img src="image_d10169.jpg" alt="狼山风景区">
+                    <h3>狼山国家森林公园</h3>
+                    <p>秀美沿江风光带，佛教名山狼山所在地</p>
+                </a>
+            </div>
+            <div class="spot-item">
+                <a href="https://baike.baidu.com/item/%E6%BF%A0%E6%B2%B3/1455749" target="_blank">
+                    <!-- 替换为真实的濠河图片 -->
+                    <img src="image_d1056a.jpg" alt="濠河风景区">
+                    <h3>南通濠河风景区</h3>
+                    <p>中国保留最完整的古护城河之一</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 第四板块：崇文重教 -->
+        <h2>崇文重教：比肩南京的教育高地</h2>
+        <p>南通的教育水平在江苏省内乃至全国都享有盛誉，民间素有“全国教育看江苏，江苏教育看南通”的美谈，其整体基础教育实力完全可以与省会南京比肩齐名。早在百年前，张謇先生便在此首创师范学校，奠定了这座城市深厚的“尊师重教”底蕴。如今，南通的基础教育模式更是全国的标杆，学风严谨踏实，各大统考成绩常年名列前茅，南通中学、海门中学等百年名校更是人才辈出。卓越的教育不仅培养了大批顶尖人才，也成为了南通最亮丽的城市名片之一。</p>
+
+    </div>
+
+    <!-- 页脚 DIV -->
+    <div class="footer">
+        &copy; 2026 Web应用开发实验一 | Designed by 王曹远 
+    </div>
+
+</body>
+</html>
